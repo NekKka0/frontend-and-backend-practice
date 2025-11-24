@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Портфолио (БЭМ)</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body class="bem-version">
+    <!-- Основной контейнер -->
+    <div class="page">
+
+        <!-- Шапка -->
+        <header class="header">
+            <div class="container">
+                <h1 class="header__title">Моё портфолио</h1>
+                <p class="header__subtitle">Студент разработчик</p>
+            </div>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--active">
+                        <a class="nav__link" href="index_v1.html">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="pages/news.html">Новости</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="pages/practices.html">Практики</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="pages/goods.html">Товары</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="pages/contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="main">
+            <div class="container">
+                <!-- Профиль -->
+                <section class="profile">
+                    <div class="profile__card">
+                        <img class="profile__photo" src="images/photo.png" alt="Фото студента">
+                        <div class="profile__info">
+                            <h2 class="profile__name">Иванов Иван Иванович</h2>
+                            <p class="profile__group">ЭФБО-13-24</p>
+                            <p class="profile__faculty">Факультет информационных технологий, специальность "Веб-разработка"</p>
+                            <div class="profile__skills">
+                                <span class="skill-tag skill-tag--html">HTML/CSS</span>
+                                <span class="skill-tag skill-tag--js">JavaScript</span>
+                                <span class="skill-tag skill-tag--bootstrap">Bootstrap</span>
+                                <span class="skill-tag skill-tag--react">React</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Обо мне -->
+                <section class="about">
+                    <h2 class="about__title">Обо мне</h2>
+                    <div class="about__content">
+                        <p class="about__text">
+                            Я увлекаюсь веб-разработкой и изучаю современные технологии.
+                            В свободное время занимаюсь созданием пет-проектов и изучаю новые фреймворки.
+                        </p>
+                        <p class="about__text">
+                            Мои основные интересы: фронтенд разработка, UX/UI дизайн и мобильная разработка.
+                            Стремлюсь к созданию качественных и удобных пользовательских интерфейсов.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Навыки -->
+                <section class="skills">
+                    <h2 class="skills__title">Мои навыки</h2>
+                    <div class="skills__grid">
+                        <div class="skill-item">
+                            <div class="skill-item__header">
+                                <span class="skill-item__name">HTML/CSS</span>
+                                <span class="skill-item__percentage">90%</span>
+                            </div>
+                            <div class="skill-item__bar">
+                                <div class="skill-item__progress skill-item__progress--html"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-item__header">
+                                <span class="skill-item__name">JavaScript</span>
+                                <span class="skill-item__percentage">75%</span>
+                            </div>
+                            <div class="skill-item__bar">
+                                <div class="skill-item__progress skill-item__progress--js"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-item__header">
+                                <span class="skill-item__name">Bootstrap</span>
+                                <span class="skill-item__percentage">85%</span>
+                            </div>
+                            <div class="skill-item__bar">
+                                <div class="skill-item__progress skill-item__progress--bootstrap"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-item__header">
+                                <span class="skill-item__name">React</span>
+                                <span class="skill-item__percentage">70%</span>
+                            </div>
+                            <div class="skill-item__bar">
+                                <div class="skill-item__progress skill-item__progress--react"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Проекты -->
+                <section class="projects">
+                    <h2 class="projects__title">Мои проекты</h2>
+                    <div class="projects__grid">
+                        <article class="project-card">
+                            <div class="project-card__image">
+                                <img src="images/project1.jpg" alt="Личный сайт">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Личный сайт</h3>
+                                <p class="project-card__description">
+                                    Сайт-портфолио на HTML, CSS и Bootstrap с адаптивным дизайном.
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag tag--html">HTML</span>
+                                    <span class="tag tag--css">CSS</span>
+                                    <span class="tag tag--bootstrap">Bootstrap</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-card__image">
+                                <img src="images/project2.jpg" alt="Todo приложение">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Todo приложение</h3>
+                                <p class="project-card__description">
+                                    Приложение для управления задачами с использованием JavaScript.
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag tag--js">JavaScript</span>
+                                    <span class="tag tag--storage">LocalStorage</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-card__image">
+                                <img src="images/project3.jpg" alt="Интернет-магазин">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Интернет-магазин</h3>
+                                <p class="project-card__description">
+                                    Прототип интернет-магазина с корзиной товаров и фильтрацией.
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag tag--react">React</span>
+                                    <span class="tag tag--api">API</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Переключатель темы -->
+                <div class="theme-switcher">
+                    <button class="theme-switcher__btn theme-switcher__btn--light" data-theme="light">
+                        Светлая тема
+                    </button>
+                    <button class="theme-switcher__btn theme-switcher__btn--dark" data-theme="dark">
+                        Тёмная тема
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <p class="footer__text">&copy; 2025 Портфолио студента. Все права защищены.</p>
+                    <div class="footer__links">
+                        <a href="pages/contacts.html" class="footer__link">Контакты</a>
+                        <a href="#" class="footer__link">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Переключатель темы для БЭМ версии
+        class ThemeSwitcher {
+            constructor() {
+                this.theme = localStorage.getItem('theme') || 'light';
+                this.init();
+            }
+
+            init() {
+                this.applyTheme(this.theme);
+                this.bindEvents();
+            }
+
+            applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+
+                // Обновляем активную кнопку
+                document.querySelectorAll('.theme-switcher__btn').forEach(btn => {
+                    btn.classList.remove('theme-switcher__btn--active');
+                });
+
+                const activeBtn = document.querySelector(`[data-theme="${theme}"]`);
+                if (activeBtn) {
+                    activeBtn.classList.add('theme-switcher__btn--active');
+                }
+            }
+
+            bindEvents() {
+                document.addEventListener('click', (e) => {
+                    if (e.target.matches('.theme-switcher__btn')) {
+                        const theme = e.target.dataset.theme;
+                        this.applyTheme(theme);
+                    }
+                });
+            }
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            new ThemeSwitcher();
+        });
+    </script>
+</body>
+</html>

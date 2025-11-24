@@ -3,76 +3,627 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товары - Семестровая работа</title>
+    <title>Товары - Интернет-магазин</title>
     <link rel="stylesheet" href="../style/styles.css">
 </head>
-<body>
-    <div class="page-container">
-        <header class="header">
-            <h1>Каталог товаров</h1>
+<body class="bootstrap-version" data-bs-theme="light">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="bg-primary text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h3 mb-1">Интернет-магазин</h1>
+                        <p class="mb-0 opacity-75">Лучшие товары по выгодным ценам</p>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge bg-light text-primary">Топ продаж</span>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link active" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-            </ul>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">
+                                <i class="bi bi-newspaper me-1"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="practices.html">
+                                <i class="bi bi-code-slash me-1"></i>Практики
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="goods.html">
+                                <i class="bi bi-cart me-1"></i>Товары
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Переключатель темы -->
+                    <div class="navbar-nav">
+                        <button class="btn theme-toggle" id="themeToggle">
+                            <i class="bi bi-sun-fill me-1"></i>
+                            <span id="themeText">Светлая тема</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </nav>
 
-        <main class="content">
-            <h1 class="section-title">Наши товары</h1>
-
-            <div class="products-grid">
-                <article class="product-card">
-                    <img src="../images/goods1.jpg" alt="Товар 1" class="product-image">
-                    <h3 class="product-name">Ноутбук игровой</h3>
-                    <p class="product-price">85 000 ₽</p>
-                    <button class="buy-button">Купить</button>
-                </article>
-
-                <article class="product-card">
-                    <img src="../images/goods2.jpg" alt="Товар 2" class="product-image">
-                    <h3 class="product-name">Смартфон</h3>
-                    <p class="product-price">45 000 ₽</p>
-                    <button class="buy-button">Купить</button>
-                </article>
-
-                <article class="product-card">
-                    <img src="../images/goods3.jpg" alt="Товар 3" class="product-image">
-                    <h3 class="product-name">Наушники</h3>
-                    <p class="product-price">12 000 ₽</p>
-                    <button class="buy-button">Купить</button>
-                </article>
-
-                <article class="product-card">
-                    <img src="../images/goods1.jpg" alt="Товар 4" class="product-image">
-                    <h3 class="product-name">Планшет</h3>
-                    <p class="product-price">32 000 ₽</p>
-                    <button class="buy-button">Купить</button>
-                </article>
-
-                <article class="product-card">
-                    <img src="../images/goods2.jpg" alt="Товар 5" class="product-image">
-                    <h3 class="product-name">Клавиатура</h3>
-                    <p class="product-price">5 000 ₽</p>
-                    <button class="buy-button">Купить</button>
-                </article>
-
-                <article class="product-card">
-                    <img src="../images/goods3.jpg" alt="Товар 6" class="product-image">
-                    <h3 class="product-name">Мышь</h3>
-                    <p class="product-price">3 500 ₽</p>
-                    <button class="buy-button">Купить</button>
-                </article>
+        <!-- Main Content -->
+        <main class="container my-4">
+            <!-- Page Header -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h1 class="h2 text-primary">Каталог товаров</h1>
+                        <div class="d-flex gap-2">
+                            <div class="dropdown">
+                                <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-filter me-1"></i>Фильтры
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">По популярности</a></li>
+                                    <li><a class="dropdown-item" href="#">По цене (возр.)</a></li>
+                                    <li><a class="dropdown-item" href="#">По цене (убыв.)</a></li>
+                                    <li><a class="dropdown-item" href="#">По новизне</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-grid me-1"></i>Категории
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Все товары</a></li>
+                                    <li><a class="dropdown-item" href="#">Электроника</a></li>
+                                    <li><a class="dropdown-item" href="#">Компьютеры</a></li>
+                                    <li><a class="dropdown-item" href="#">Смартфоны</a></li>
+                                    <li><a class="dropdown-item" href="#">Аксессуары</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-muted">Найдено 12 товаров</p>
+                </div>
             </div>
+
+            <!-- Search and Filters -->
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex gap-2 justify-content-md-end">
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="viewMode" id="gridView" checked>
+                            <label class="btn btn-outline-primary" for="gridView">
+                                <i class="bi bi-grid-3x3-gap"></i>
+                            </label>
+                            <input type="radio" class="btn-check" name="viewMode" id="listView">
+                            <label class="btn btn-outline-primary" for="listView">
+                                <i class="bi bi-list"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="row g-4" id="productsGrid">
+                <!-- Product 1 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="card h-100 product-card">
+                        <div class="position-relative">
+                            <img src="../images/goods1.jpg" class="card-img-top product-img" alt="Ноутбук игровой">
+                            <span class="position-absolute top-0 start-0 badge bg-danger m-2">-15%</span>
+                            <span class="position-absolute top-0 end-0 badge bg-success m-2">Хит</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Ноутбук игровой ASUS ROG</h5>
+                            <p class="card-text text-muted small">Процессор Intel Core i7, 16GB RAM, SSD 512GB, NVIDIA RTX 3060</p>
+                            <div class="mb-2">
+                                <div class="rating">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                    <span class="text-muted ms-1">(128)</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="h5 text-primary mb-0">85 000 ₽</span>
+                                    <span class="text-muted text-decoration-line-through small">99 000 ₽</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Ноутбук игровой ASUS ROG">
+                                        <i class="bi bi-cart me-1"></i>Купить
+                                    </button>
+                                    <button class="btn btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="card h-100 product-card">
+                        <div class="position-relative">
+                            <img src="../images/goods2.jpg" class="card-img-top product-img" alt="Смартфон iPhone">
+                            <span class="position-absolute top-0 end-0 badge bg-info m-2">Новинка</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Смартфон iPhone 15 Pro</h5>
+                            <p class="card-text text-muted small">6.1" OLED, A17 Pro, 128GB, Титан, 48MP камера</p>
+                            <div class="mb-2">
+                                <div class="rating">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                    <span class="text-muted ms-1">(94)</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="h5 text-primary mb-0">45 000 ₽</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Смартфон iPhone 15 Pro">
+                                        <i class="bi bi-cart me-1"></i>Купить
+                                    </button>
+                                    <button class="btn btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="card h-100 product-card">
+                        <div class="position-relative">
+                            <img src="../images/goods3.jpg" class="card-img-top product-img" alt="Наушники Sony">
+                            <span class="position-absolute top-0 start-0 badge bg-warning m-2">-10%</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Наушники Sony WH-1000XM4</h5>
+                            <p class="card-text text-muted small">Беспроводные, шумоподавление, 30ч работы</p>
+                            <div class="mb-2">
+                                <div class="rating">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span class="text-muted ms-1">(256)</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="h5 text-primary mb-0">12 000 ₽</span>
+                                    <span class="text-muted text-decoration-line-through small">13 500 ₽</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Наушники Sony WH-1000XM4">
+                                        <i class="bi bi-cart me-1"></i>Купить
+                                    </button>
+                                    <button class="btn btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="card h-100 product-card">
+                        <img src="../images/goods1.jpg" class="card-img-top product-img" alt="Планшет iPad">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Планшет iPad Air 5</h5>
+                            <p class="card-text text-muted small">10.9" Liquid Retina, M1, 64GB, Wi-Fi</p>
+                            <div class="mb-2">
+                                <div class="rating">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                    <span class="text-muted ms-1">(87)</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="h5 text-primary mb-0">32 000 ₽</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Планшет iPad Air 5">
+                                        <i class="bi bi-cart me-1"></i>Купить
+                                    </button>
+                                    <button class="btn btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="card h-100 product-card">
+                        <img src="../images/goods2.jpg" class="card-img-top product-img" alt="Клавиатура механическая">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Клавиатура Logitech MX</h5>
+                            <p class="card-text text-muted small">Механическая, RGB подсветка, Bluetooth</p>
+                            <div class="mb-2">
+                                <div class="rating">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                    <span class="text-muted ms-1">(64)</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="h5 text-primary mb-0">5 000 ₽</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Клавиатура Logitech MX">
+                                        <i class="bi bi-cart me-1"></i>Купить
+                                    </button>
+                                    <button class="btn btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="card h-100 product-card">
+                        <div class="position-relative">
+                            <img src="../images/goods3.jpg" class="card-img-top product-img" alt="Игровая мышь">
+                            <span class="position-absolute top-0 start-0 badge bg-danger m-2">-20%</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Игровая мышь Razer Viper</h5>
+                            <p class="card-text text-muted small">Оптический сенсор, 16000 DPI, RGB</p>
+                            <div class="mb-2">
+                                <div class="rating">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span class="text-muted ms-1">(142)</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="h5 text-primary mb-0">3 500 ₽</span>
+                                    <span class="text-muted text-decoration-line-through small">4 300 ₽</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Игровая мышь Razer Viper">
+                                        <i class="bi bi-cart me-1"></i>Купить
+                                    </button>
+                                    <button class="btn btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="card h-100 product-card">
+                        <img src="../images/goods1.jpg" class="card-img-top product-img" alt="Монитор игровой">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Монитор Samsung Odyssey</h5>
+                            <p class="card-text text-muted small">27" 1440p, 165Hz, IPS, G-Sync</p>
+                            <div class="mb-2">
+                                <div class="rating">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                    <span class="text-muted ms-1">(78)</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="h5 text-primary mb-0">28 000 ₽</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Монитор Samsung Odyssey">
+                                        <i class="bi bi-cart me-1"></i>Купить
+                                    </button>
+                                    <button class="btn btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="card h-100 product-card">
+                        <div class="position-relative">
+                            <img src="../images/goods2.jpg" class="card-img-top product-img" alt="Умные часы">
+                            <span class="position-absolute top-0 end-0 badge bg-info m-2">Новинка</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Умные часы Apple Watch</h5>
+                            <p class="card-text text-muted small">Series 9, 45mm, GPS + Cellular</p>
+                            <div class="mb-2">
+                                <div class="rating">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                    <span class="text-muted ms-1">(53)</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="h5 text-primary mb-0">18 500 ₽</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Умные часы Apple Watch">
+                                        <i class="bi bi-cart me-1"></i>Купить
+                                    </button>
+                                    <button class="btn btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav aria-label="Page navigation" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Назад</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Вперед</a>
+                    </li>
+                </ul>
+            </nav>
         </main>
 
-        <footer class="footer">
-            <p>&copy; 2025 Семестровая работа. Все права защищены.</p>
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <h5>Интернет-магазин</h5>
+                        <p class="text-muted">Лучшие товары по выгодным ценам с доставкой по всей России.</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <h5>Контакты</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-telephone me-2"></i>+7 (495) 123-45-67</li>
+                            <li><i class="bi bi-envelope me-2"></i>info@shop.ru</li>
+                            <li><i class="bi bi-geo-alt me-2"></i>Москва, ул. Пушкина, 1</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <h5>Мы в соцсетях</h5>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-white"><i class="bi bi-telegram fs-4"></i></a>
+                            <a href="#" class="text-white"><i class="bi bi-vk fs-4"></i></a>
+                            <a href="#" class="text-white"><i class="bi bi-whatsapp fs-4"></i></a>
+                            <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025 Интернет-магазин. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
+
+    <!-- Product Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalTitle">Оформление заказа</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm">
+                        <div class="mb-3">
+                            <label class="form-label">Товар</label>
+                            <input type="text" class="form-control" id="selectedProduct" readonly>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Имя *</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Телефон *</label>
+                                    <input type="tel" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email *</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Адрес доставки</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Комментарий к заказу</label>
+                            <textarea class="form-control" rows="3" placeholder="Дополнительные пожелания..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="submit" form="orderForm" class="btn btn-primary">
+                        <i class="bi bi-check-lg me-1"></i>Оформить заказ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Переключатель темы для Bootstrap версии
+        class BootstrapThemeSwitcher {
+            constructor() {
+                this.theme = localStorage.getItem('bs-theme') || 'light';
+                this.themeToggle = document.getElementById('themeToggle');
+                this.themeText = document.getElementById('themeText');
+                this.init();
+            }
+
+            init() {
+                this.applyTheme(this.theme);
+                this.bindEvents();
+            }
+
+            applyTheme(theme) {
+                document.body.setAttribute('data-bs-theme', theme);
+                localStorage.setItem('bs-theme', theme);
+
+                // Обновляем иконку и текст
+                const icon = this.themeToggle.querySelector('i');
+                if (theme === 'dark') {
+                    icon.className = 'bi bi-moon-fill me-1';
+                    this.themeText.textContent = 'Тёмная тема';
+                    this.themeToggle.innerHTML = '<i class="bi bi-moon-fill me-1"></i><span id="themeText">Тёмная тема</span>';
+                } else {
+                    icon.className = 'bi bi-sun-fill me-1';
+                    this.themeText.textContent = 'Светлая тема';
+                    this.themeToggle.innerHTML = '<i class="bi bi-sun-fill me-1"></i><span id="themeText">Светлая тема</span>';
+                }
+            }
+
+            bindEvents() {
+                this.themeToggle.addEventListener('click', () => {
+                    const currentTheme = document.body.getAttribute('data-bs-theme');
+                    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                    this.applyTheme(newTheme);
+                });
+            }
+        }
+
+        // Обработка модального окна товара
+        const productModal = document.getElementById('productModal');
+        if (productModal) {
+            productModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const productName = button.getAttribute('data-product');
+                const modalTitle = productModal.querySelector('#productModalTitle');
+                const productInput = productModal.querySelector('#selectedProduct');
+
+                modalTitle.textContent = `Оформление заказа: ${productName}`;
+                productInput.value = productName;
+            });
+        }
+
+        // Обработка формы заказа
+        const orderForm = document.getElementById('orderForm');
+        if (orderForm) {
+            orderForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Заказ успешно оформлен! Мы свяжемся с вами в ближайшее время.');
+                const modal = bootstrap.Modal.getInstance(document.getElementById('productModal'));
+                modal.hide();
+                orderForm.reset();
+            });
+        }
+
+        // Переключение режима просмотра
+        const gridView = document.getElementById('gridView');
+        const listView = document.getElementById('listView');
+        const productsGrid = document.getElementById('productsGrid');
+
+        if (gridView && listView && productsGrid) {
+            gridView.addEventListener('change', function() {
+                productsGrid.className = 'row g-4';
+            });
+
+            listView.addEventListener('change', function() {
+                productsGrid.className = 'row g-3';
+                const productCards = productsGrid.querySelectorAll('.col-xl-3');
+                productCards.forEach(card => {
+                    card.className = 'col-12';
+                });
+            });
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            new BootstrapThemeSwitcher();
+        });
+    </script>
 </body>
 </html>

@@ -80,8 +80,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
+    <Content Include="index_v1.html" />
+    <Content Include="js\theme-switcher.js" />
     <Content Include="pages\contacts.html" />
     <Content Include="pages\goods.html" />
+    <Content Include="pages\goods_v1.html" />
     <Content Include="pages\news.html" />
     <Content Include="pages\practices.html" />
     <Content Include="style\styles.css" />
