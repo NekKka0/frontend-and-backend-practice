@@ -3,65 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
-    <link rel="stylesheet" href="style/styles.css">
+    <title>Новости - Семестровая работа</title>
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
     <div class="page-container">
-        <div class="header">Портфолио студента</div>
+        <header class="header">
+            <h1>Новости проекта</h1>
+        </header>
 
         <nav class="nav">
             <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link active" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
 
         <main class="content">
-            <div class="profile-header">
-                <h1 class="profile-title">Информация об авторе</h1>
-                <img class="profile-photo" src="images/photo.png" alt="Фото автора">
-                <h2 class="profile-name">Иванов Иван Иванович</h2>
-                <p class="profile-group">ЭФБО-01-22</p>
-            </div>
+            <section class="news-section">
+                <h1 class="section-title">Последние новости</h1>
 
-            <div class="about-me">
-                <p>
-                    Обо мне: Я родился в Москве. Учусь в университете на направлении "Фронтенд и бэкенд разработка".
-                    Увлекаюсь программированием, веб-разработкой и современными технологиями. В свободное время занимаюсь
-                    спортом и изучаю новые фреймворки.
-                </p>
-            </div>
+                <div class="news-container">
+                    <article class="news-card">
+                        <h2 class="news-title">Запуск нового проекта</h2>
+                        <div class="news-meta">
+                            <span class="news-date">15.01.2025</span>
+                            <span class="news-author">Автор: Астафьев Р.У.</span>
+                        </div>
+                        <p class="news-text">
+                            Мы рады сообщить о запуске нового учебного проекта по фронтенд и бэкенд разработке.
+                            Студенты начинают работу над своими семестровыми проектами.
+                        </p>
+                    </article>
 
-            <div class="skills-container">
-                <div class="skill-tag">HTML/CSS</div>
-                <div class="skill-tag">JavaScript</div>
-                <div class="skill-tag">React</div>
-                <div class="skill-tag">Node.js</div>
-            </div>
+                    <article class="news-card">
+                        <h2 class="news-title">Обновление учебных материалов</h2>
+                        <div class="news-meta">
+                            <span class="news-date">10.01.2025</span>
+                            <span class="news-author">Автор: Астафьев Р.У.</span>
+                        </div>
+                        <p class="news-text">
+                            Были обновлены методические материалы по практическим занятиям. Добавлены новые
+                            примеры кода и дополнительные задания для самостоятельной работы.
+                        </p>
+                    </article>
 
-            <div class="experience-section">
-                <h2 class="section-title">Мой опыт работы</h2>
-                <div class="experience-card">
-                    <h3 class="experience-title">Веб-разработчик стажер</h3>
-                    <p class="experience-desc">Разрабатывал пользовательские интерфейсы, участвовал в создании SPA приложений.</p>
+                    <article class="news-card">
+                        <h2 class="news-title">Встреча с представителями IT-компаний</h2>
+                        <div class="news-meta">
+                            <span class="news-date">05.01.2025</span>
+                            <span class="news-author">Автор: Астафьев Р.У.</span>
+                        </div>
+                        <p class="news-text">
+                            На следующей неделе планируется встреча с представителями ведущих IT-компаний
+                            для обсуждения возможностей стажировки и трудоустройства студентов.
+                        </p>
+                    </article>
                 </div>
-                <div class="experience-card">
-                    <h3 class="experience-title">Фриланс проекты</h3>
-                    <p class="experience-desc">Создавал лендинги и корпоративные сайты для малого бизнеса.</p>
-                </div>
-                <div class="experience-card">
-                    <h3 class="experience-title">Учебные проекты</h3>
-                    <p class="experience-desc">Разрабатывал полноценные веб-приложения в рамках учебной программы.</p>
-                </div>
-            </div>
+            </section>
         </main>
 
         <footer class="footer">
-            <p>&copy; 2025 Все права защищены.</p>
+            <p>&copy; 2025 Семестровая работа. Все права защищены.</p>
         </footer>
     </div>
 </body>
